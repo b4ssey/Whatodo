@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@drawable/backgroundtodos"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical"
+        android:layout_width="220dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/todotitle"
+            android:layout_marginTop="15dp"
+            android:text="Play Football"
+            android:textSize="22sp"
+            android:textColor="#99C840"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tododescription"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="I'll go to city park in Town, to meet up with my guys"
+            android:textSize="18sp"
+            android:maxLength="56"
+            android:textColor="#E8F6CC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tododate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Tommorrow"
+            android:layout_marginTop="4dp"
+            android:textColor="#2C93C9"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

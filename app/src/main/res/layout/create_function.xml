@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFBFB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:orientation="vertical"
+        android:background="#3E7B41">
+
+        <TextView
+            android:id="@+id/createTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/create_title"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="26sp">
+
+        </TextView>
+        
+        <view
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#9DCA45">
+
+        </view>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroundtodos"
+        android:orientation="vertical"
+        android:layout_marginTop="-40dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:id="@+id/taskname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#3E7B41"
+                android:layout_marginBottom="10dp"
+                android:text="@string/task_name"
+                />
+            <EditText
+                android:id="@+id/tasksubject"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textColor="#3E7B41"
+                android:hint="Task Subject"
+                android:paddingLeft="12dp"
+                android:inputType="text"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/taskdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#3E7B41"
+                android:layout_marginBottom="10dp"
+                android:text="@string/task_description"
+                />
+
+            <EditText
+                android:id="@+id/taskplanning"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:hint="What are you planning?"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                android:textColor="#3E7B41"
+                android:importantForAutofill="no" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/taskdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#3E7B41"
+                android:layout_marginBottom="10dp"
+                android:text="@string/task_date"
+                />
+            <EditText
+                android:id="@+id/taskdating"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textColor="#3E7B41"
+                android:hint="Task Date"
+                android:paddingLeft="12dp"
+                android:inputType="text"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/createbutton"
+                android:layout_width="175dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/backgroundnewbutton"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/create_todo"
+                android:textColor="#FFF" />
+
+            <Button
+                android:id="@+id/cancelbutton"
+                android:layout_width="175dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/backgroundwhite"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/cancel_todo"
+                android:textColor="#FFF" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">WhaToDo</string>
+    <string name="read_title">WhaToDo</string>
+    <string name="read_subtitle">Wetin Remain?</string>
+    <string name="create_title">New Task</string>
+    <string name="task_name">Task Name</string>
+    <string name="task_subject">Task Subject</string>
+    <string name="task_description">Task Description</string>
+    <string name="task_date">Timeline</string>
+    <string name="create_todo">Create</string>
+    <string name="cancel_todo">Cancel</string>
+    <string name="updelete_title">Edit Task</string>
+    <string name="update_todo">Update</string>
+    <string name="delete_todo">Delete</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>
