@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class TodosAdapter extends BaseAdapter {
 
+
+
     private Context context;
     private ArrayList<Todos> todoList;
 

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -37,7 +38,6 @@ public class ReadActivity extends AppCompatActivity {
         final Button buttonAddNew = (Button) findViewById(R.id.buttonaddnew);
         todoFormat =  findViewById(R.id.todoformat);
 
-        final TextView toDoTitle = findViewById(R.id.todotitle);
 
 
 
@@ -64,9 +64,9 @@ public class ReadActivity extends AppCompatActivity {
             }
         });
 
-        toDoTitle.setOnClickListener(new View.OnClickListener() {
+        todoFormat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ReadActivity.this, UpDeleteActivity.class);
                 startActivity(intent);
             }
