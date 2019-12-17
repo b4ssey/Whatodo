@@ -16,12 +16,12 @@ import java.util.List;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class UpDeleteActivity extends AppCompatActivity {
+public class UpDeleteActivity extends AppCompatActivity{
 
     private Todos todos;
     private List<Todos> todoList;
     public ArrayList<Todos> todoArrayList;
-    public TodosAdapter todoAdapter;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,12 +43,28 @@ public class UpDeleteActivity extends AppCompatActivity {
             todoArrayList.add(todos);
         }
 
-        todoAdapter = new TodosAdapter(UpDeleteActivity.this, todoArrayList);
+        final int todoPosition = getIntent().getIntExtra("TODO_POSITION", 0);
+
+        Todos todo = todoArrayList.get(todoPosition-1);
+        taskSubject.setText(todo.getCreateTitle());
+        taskPlanning.setText(todo.getCreatePlanning());
+        taskDate.setText(todo.getCreateDate());
+
 
 
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Todos todo = Todos.findById(Todos.class, todoPosition);
+
+                todo.setCreateTitle(taskSubject.getText().toString());
+                todo.setCreatePlanning(taskPlanning.getText().toString());
+                todo.setCreateDate(taskDate.getText().toString());
+
+                todo.save();
+
+
                 Intent intention = new Intent(UpDeleteActivity.this, ReadActivity.class);
                 startActivity(intention);
 

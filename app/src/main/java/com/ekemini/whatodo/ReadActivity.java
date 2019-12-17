@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ReadActivity extends AppCompatActivity {
+public class ReadActivity extends AppCompatActivity implements TodoClickListener{
 
     private Todos todos;
     private List<Todos> todoList;
@@ -50,7 +51,7 @@ public class ReadActivity extends AppCompatActivity {
             todoArrayList.add(todos);
         }
 
-        todoAdapter = new TodosAdapter(ReadActivity.this, todoArrayList);
+        todoAdapter = new TodosAdapter(ReadActivity.this, todoArrayList, this);
         todoFormat.setAdapter(todoAdapter);
 
 
@@ -64,15 +65,16 @@ public class ReadActivity extends AppCompatActivity {
             }
         });
 
-        todoFormat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ReadActivity.this, UpDeleteActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
 
     }
-}
+
+    @Override
+    public void click(int position) {
+        Intent intent = new Intent(ReadActivity.this, UpDeleteActivity.class);
+        intent.putExtra("TODO_POSITION", position);
+        Log.d("readActivity", position + "");
+        startActivity(intent);
+        finish();
+    }
+    }
+

@@ -22,8 +22,7 @@ public class CreateActivity extends AppCompatActivity {
     private Todos todos;
     private List<Todos> todoList;
     public ArrayList<Todos> todoArrayList;
-    public TodosAdapter todoAdapter;
-    public ListView todoFormat;
+
 
 
 
@@ -47,9 +46,6 @@ public class CreateActivity extends AppCompatActivity {
             todoArrayList.add(todos);
         }
 
-        todoAdapter = new TodosAdapter(CreateActivity.this, todoArrayList);
-
-        todoFormat = (ListView) findViewById(R.id.todoformat);
 
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,12 +61,6 @@ public class CreateActivity extends AppCompatActivity {
                 todos.setCreateDate(task_date);
                 todos.save();
 
-                todoArrayList.add(todos);
-
-                Toast.makeText(CreateActivity.this, "Done!", Toast.LENGTH_SHORT).show();
-
-
-                todoAdapter.notifyDataSetChanged();
 
                 Intent intention = new Intent(CreateActivity.this, ReadActivity.class);
                 startActivity(intention);

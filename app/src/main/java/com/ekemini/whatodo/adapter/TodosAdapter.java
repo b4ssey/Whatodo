@@ -7,6 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.ekemini.whatodo.R;
+import com.ekemini.whatodo.TodoClickListener;
 import com.ekemini.whatodo.todosmodel.Todos;
 
 import java.util.ArrayList;
@@ -17,10 +18,12 @@ public class TodosAdapter extends BaseAdapter {
 
     private Context context;
     private ArrayList<Todos> todoList;
+    TodoClickListener todoClickListener;
 
-    public TodosAdapter(Context context, ArrayList<Todos> todoList) {
+    public TodosAdapter(Context context, ArrayList<Todos> todoList, TodoClickListener myTodoClickListener) {
         this.context = context;
         this.todoList = todoList;
+        this.todoClickListener = myTodoClickListener;
     }
 
     @Override
@@ -39,7 +42,7 @@ public class TodosAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
 
         if(convertView == null){
@@ -55,6 +58,14 @@ public class TodosAdapter extends BaseAdapter {
         todoTitle.setText(todos.getCreateTitle());
         todoDescription.setText(todos.getCreatePlanning());
         todoDate.setText(todos.getCreateDate());
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                todoClickListener.click(position + 1);
+            }
+        });
+
 
 
 

@@ -10,11 +10,11 @@ public class Todos extends SugarRecord {
     private String createPlanning;
     private String createDate;
 
-    public Todos(){
+    public Todos() {
 
     }
 
-    public Todos(String createTitle, String createPlanning, String createDate){
+    public Todos(String createTitle, String createPlanning, String createDate) {
         this.createTitle = createTitle;
         this.createPlanning = createPlanning;
         this.createDate = createDate;
@@ -44,3 +44,4 @@ public class Todos extends SugarRecord {
         this.createDate = createDate;
     }
 }
+
