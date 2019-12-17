@@ -32,11 +32,22 @@ public class CreateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_function);
 
-        final EditText taskSubject = (EditText) findViewById(R.id.tasksubject);
-        final EditText taskPlanning = (EditText) findViewById(R.id.taskplanning);
-        final EditText taskDate = (EditText) findViewById(R.id.taskdating);
-        Button createButton = (Button) findViewById(R.id.createbutton);
-        final Button cancelButton = (Button) findViewById(R.id.cancelbutton);
+        final EditText taskSubject = findViewById(R.id.tasksubject);
+        final EditText taskPlanning = findViewById(R.id.taskplanning);
+        final EditText taskDate = findViewById(R.id.taskdating);
+        Button createButton = findViewById(R.id.createbutton);
+        final Button cancelButton = findViewById(R.id.cancelbutton);
+
+        todoArrayList = new ArrayList<>();
+        todos = new Todos();
+        todoList = Todos.listAll(Todos.class);
+
+        for(int i=0; i<todoList.size(); i++){
+            todos = todoList.get(i);
+            todoArrayList.add(todos);
+        }
+
+        todoAdapter = new TodosAdapter(CreateActivity.this, todoArrayList);
 
         todoFormat = (ListView) findViewById(R.id.todoformat);
 
@@ -55,10 +66,9 @@ public class CreateActivity extends AppCompatActivity {
                 todos.save();
 
                 todoArrayList.add(todos);
-                todoFormat.setAdapter(todoAdapter);
-
 
                 Toast.makeText(CreateActivity.this, "Done!", Toast.LENGTH_SHORT).show();
+
 
                 todoAdapter.notifyDataSetChanged();
 
@@ -77,17 +87,7 @@ public class CreateActivity extends AppCompatActivity {
             }
         });
 
-        todoArrayList = new ArrayList<>();
-        todos = new Todos();
-        todoList = Todos.listAll(Todos.class);
 
-        for(int i=0; i<todoList.size(); i++){
-            todos = todoList.get(i);
-            todoArrayList.add(todos);
-        }
-
-        todoAdapter = new TodosAdapter(CreateActivity.this, todoArrayList);
-        todoFormat.setAdapter(todoAdapter);
 
 
 
