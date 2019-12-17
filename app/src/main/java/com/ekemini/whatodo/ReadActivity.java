@@ -37,6 +37,8 @@ public class ReadActivity extends AppCompatActivity {
         final Button buttonAddNew = (Button) findViewById(R.id.buttonaddnew);
         todoFormat =  findViewById(R.id.todoformat);
 
+        final TextView toDoTitle = findViewById(R.id.todotitle);
+
 
 
         todoArrayList = new ArrayList<>();
@@ -59,6 +61,14 @@ public class ReadActivity extends AppCompatActivity {
                 Intent intention = new Intent(ReadActivity.this, CreateActivity.class);
                 startActivity(intention);
 
+            }
+        });
+
+        toDoTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReadActivity.this, UpDeleteActivity.class);
+                startActivity(intent);
             }
         });
 
