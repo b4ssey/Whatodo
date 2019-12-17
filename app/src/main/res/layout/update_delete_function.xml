@@ -97,13 +97,14 @@
             <EditText
                 android:id="@+id/taskplanning"
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_height="130dp"
                 android:background="@drawable/backgroundinputtask"
                 android:hint="What are you planning?"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:paddingLeft="12dp"
                 android:textColor="#3E7B41"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:gravity="left|top"/>
 
         </LinearLayout>
 
@@ -145,7 +146,7 @@
 
             <Button
                 android:id="@+id/updatebutton"
-                android:layout_width="175dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
                 android:background="@drawable/backgroundnewbutton"
@@ -155,7 +156,7 @@
 
             <Button
                 android:id="@+id/deletebutton"
-                android:layout_width="175dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="20dp"
