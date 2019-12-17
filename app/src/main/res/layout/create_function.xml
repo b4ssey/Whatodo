@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/backgroundtodos"
         android:orientation="vertical"
-        android:layout_marginTop="-40dp"
+        android:layout_marginTop="-60dp"
         android:paddingTop="22dp"
         android:paddingBottom="22dp">
 
@@ -64,6 +64,7 @@
                 android:text="@string/task_name"
                 />
             <EditText
+                android:background="@drawable/backgroundinputtask"
                 android:id="@+id/tasksubject"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
@@ -94,14 +95,16 @@
                 />
 
             <EditText
+                android:background="@drawable/backgroundinputtask"
                 android:id="@+id/taskplanning"
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_height="130dp"
                 android:hint="What are you planning?"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:paddingLeft="12dp"
                 android:textColor="#3E7B41"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:gravity="top|left"/>
 
         </LinearLayout>
 
@@ -123,6 +126,7 @@
                 android:text="@string/task_date"
                 />
             <EditText
+                android:background="@drawable/backgroundinputtask"
                 android:id="@+id/taskdating"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
@@ -142,7 +146,7 @@
 
             <Button
                 android:id="@+id/createbutton"
-                android:layout_width="175dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
                 android:background="@drawable/backgroundnewbutton"
@@ -152,11 +156,11 @@
 
             <Button
                 android:id="@+id/cancelbutton"
-                android:layout_width="175dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/backgroundwhite"
+                android:background="@drawable/backgroundred"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/cancel_todo"
                 android:textColor="#FFF" />

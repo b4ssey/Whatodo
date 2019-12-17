@@ -30,7 +30,7 @@
             android:text="I'll go to city park in Town, to meet up with my guys"
             android:textSize="18sp"
             android:maxLength="56"
-            android:textColor="#E8F6CC"
+            android:textColor="#7A757D"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -39,16 +39,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="30dp">
 
         <TextView
             android:id="@+id/tododate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
             android:text="Tommorrow"
             android:layout_marginTop="4dp"
             android:textColor="#2C93C9"

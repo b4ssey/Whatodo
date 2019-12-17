@@ -41,7 +41,8 @@
                         android:layout_marginTop="8dp"
                         android:text="@string/read_subtitle"
                         android:textColor="#E8F6CC"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        />
 
            </LinearLayout>
 
